@@ -3,42 +3,33 @@ How to install Heimdall
 Installation de la version 2.5.8 de Heimdall en suivant les commandes suivantes :
 
 téléchargement du fichier compréssé de Heimdall :
-
 <code>wget https://github.com/nblesgaz/infralocal/blob/main/Heimdall/V2.5.8.tar.gz</code>
 
 Décompression du fichier compressé :
-
 <code>tar xzvf V2.5.8.tar.gz</code>
 
 Installer php :
-
 <code>apt install php</code>
 
 Aller dans le dossier décompressé :
-
 <code>cd Heimdall-2.5.8</code>
 
 Puis tester le bon fonctionnement en faisant la commande (remplacer config ip et port au choix) :
-
 <code>php artisan serve –-host=10.79.1.6 –-port=8080</code> 
 
 Le résultat doit être le suivant :
-
 <code>
 Starting Laravel development server: http://10.79.1.6:8080
 [Tue Mar 19 20:22:58 2024] PHP 8.2.7 Development Server (http://10.79.1.6:8080) started
 </code>
 
 On va créer un service heimdall que nous pourrons stoper, commencer ainsi que voir son status, pour cela, aller dans le répertoire des service Debian :
-
 <code>cd /etc/systemd/system/</code>
 
 Puis, créer un fichier "heimdall.service" :
-
 <code>nano heimdall.service</code>
 
 Dans ce fichier, nous y ajouterons ces ligne, qui vont également permettre le lancement automatique du service au démarrage de la machine :
-
 <code>
 [Unit] 
 Description=Heimdall 
@@ -58,5 +49,4 @@ WantedBy=multi-user.target
 </code>
 
 On peut désormais y accéder via son IP et son port mentionné via son navigateur :
-
 <code>http://10.79.1.6:8080/</code>
