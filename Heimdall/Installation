@@ -4,7 +4,7 @@ Installation de la version 2.5.8 de Heimdall en suivant les commandes suivantes 
 
 téléchargement du fichier compréssé de Heimdall :
 
-<code></code>
+<code>wget https://github.com/nblesgaz/infralocal/blob/main/Heimdall/V2.5.8.tar.gz</code>
 
 Décompression du fichier compressé :
 
